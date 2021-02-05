@@ -1,0 +1,18 @@
+[
+  {
+    "text": "good afternoon",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.5562521815299988
+    }
+  },
+  {
+    "text": "o que \u00e9 o servi\u00e7o de SOLICITAR CARTEIRA DE IDENTIDADE CIVIL",
+    "intent": "what_is",
+    "intent_prediction": {
+      "name": "time",
+      "confidence": 0.46859174966812134
+    }
+  }
+]

@@ -1,0 +1,43 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - oi
+    - olá
+    - bom dia
+    - boa tarde
+    - boa noite
+
+- intent: goodbye
+  examples: |
+    - tchau
+    - até mais
+    - até
+    - vejo você depois
+    - adeus
+    - tenha um bom dia
+
+- intent: pink_floyd_1
+  examples: |
+    - Qual a banda britânica de rock formada em [Londres] (LOC) em 1965
+    - uma banda britânica de rock formada em [Londres] (LOC) em 1965
+    - Qual o nome da banda britânica de rock formada em [Londres] (LOC) em 1965
+
+- intent: pink_floyd_2
+  examples: |
+    - qual o grupo fundado pelos estudantes [Syd Barrett](PESSOA), [Nick Mason](PESSOA), [Roger Waters](PESSOA) e [Richard Wright](PESSOA)
+    - qual o grupo fundado por [Syd Barrett](PESSOA), [Nick Mason](PESSOA), [Roger Waters](PESSOA) e [Richard Wright](PESSOA)
+    - qual grupo foi fundado por [Syd Barrett](PESSOA), [Nick Mason](PESSOA), [Roger Waters](PESSOA) e [Richard Wright](PESSOA)
+
+- intent: tribunal_1
+  examples: |
+    - onde está localizado o [Tribunal de Contas da União](PUB)
+    - onde se encontra o [Tribunal de Contas da União](PUB)
+    - em que local está o [Tribunal de Contas da União](PUB)
+
+- intent: tribunal_2
+  examples: |
+    - qual instituição é localizado em [Brasília](LOC) e foi fundado por [Rui Barbosa](PESSOA)
+    - instituição localizado em [Brasília](LOC) efundado por [Rui Barbosa](PESSOA)
+    - qual instituição foi fundado por [Rui Barbosa](PESSOA) e está localizado em [Brasília](LOC)

@@ -1,0 +1,23 @@
+version: "2.0"
+
+stories:
+
+- story: pink floyd 1
+  steps:
+  - intent: pink_floyd_1
+  - action: utter_pink_floyd_1
+
+- story: pink floyd 2
+  steps:
+  - intent: pink_floyd_2
+  - action: utter_pink_floyd_2
+
+- story: instituicao 1
+  steps:
+  - intent: tribunal_1
+  - action: utter_tribunal_1
+
+- story: instituicao 2
+  steps:
+  - intent: tribunal_2
+  - action: utter_tribunal_2

@@ -1,0 +1,38 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - pink_floyd_1
+  - pink_floyd_2
+  - tribunal_1
+  - tribunal_2
+
+entities:
+  - LOC
+  - PESSOA
+  - PUB
+
+responses:
+  utter_greet:
+  - text: "olá, o que gostaria de saber?"
+
+  utter_goodbye:
+  - text: "tchau"
+
+  utter_pink_floyd_1:
+  - text: "Pink Floyd"
+  
+  utter_pink_floyd_2:
+  - text: "Pink Floyd"
+
+  utter_tribunal_1:
+  - text: "Brasília"
+
+  utter_tribunal_2:
+  - text: "Tribunal de Contas da União"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
