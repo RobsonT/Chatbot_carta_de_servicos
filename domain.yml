@@ -4,15 +4,17 @@ intents:
   - greet
   - goodbye
   - affirm
-  - pink_floyd_1
-  - pink_floyd_2
-  - tribunal_1
-  - tribunal_2
+  - dsc_requisitos
+  - dsc_servico
+  - dsc_horario
+  - dsc_etapas
 
 entities:
-  - LOC
-  - PESSOA
-  - PUB
+  - servico
+
+slots:
+  -slot_servico:
+    type: text
 
 responses:
   utter_greet:
@@ -21,17 +23,17 @@ responses:
   utter_goodbye:
   - text: "tchau"
 
-  utter_pink_floyd_1:
-  - text: "Pink Floyd"
+  utter_dsc_requisitos:
+  - text: "para realizar o serviço é necessario os seguintes documentos..."
   
-  utter_pink_floyd_2:
-  - text: "Pink Floyd"
+  utter_dsc_servico:
+  - text: "a audiometria é..."
 
-  utter_tribunal_1:
-  - text: "Brasília"
+  utter_dsc_horario:
+  - text: "os horários de atendimento são"
 
-  utter_tribunal_2:
-  - text: "Tribunal de Contas da União"
+  utter_dsc_etapas:
+  - text: "as etpas são..."
 
 session_config:
   session_expiration_time: 60

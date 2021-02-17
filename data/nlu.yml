@@ -18,26 +18,24 @@ nlu:
     - adeus
     - tenha um bom dia
 
-- intent: pink_floyd_1
+- intent: dsc_requisitos
   examples: |
-    - Qual a banda britânica de rock formada em [Londres] (LOC) em 1965
-    - uma banda britânica de rock formada em [Londres] (LOC) em 1965
-    - Qual o nome da banda britânica de rock formada em [Londres] (LOC) em 1965
+    - o que é necessário documentos preciso para [audiometria](servico)
+    - Quais os documentos necessário preciso para [audiometria](servico)
+    - Quais documentos necessário para [audiometria](servico)
 
-- intent: pink_floyd_2
+- intent: dsc_horario
   examples: |
-    - qual o grupo fundado pelos estudantes [Syd Barrett](PESSOA), [Nick Mason](PESSOA), [Roger Waters](PESSOA) e [Richard Wright](PESSOA)
-    - qual o grupo fundado por [Syd Barrett](PESSOA), [Nick Mason](PESSOA), [Roger Waters](PESSOA) e [Richard Wright](PESSOA)
-    - qual grupo foi fundado por [Syd Barrett](PESSOA), [Nick Mason](PESSOA), [Roger Waters](PESSOA) e [Richard Wright](PESSOA)
+    - quais os horarios que posso marcar a [audiometria](servico)
+    - quais os horariosde funcionamento da [audiometria](servico)
 
-- intent: tribunal_1
+- intent: dsc_servico
   examples: |
-    - onde está localizado o [Tribunal de Contas da União](PUB)
-    - onde se encontra o [Tribunal de Contas da União](PUB)
-    - em que local está o [Tribunal de Contas da União](PUB)
+    - do que se trata o serviço de [audiometria](servico)
+    - do que se trata a [audiometria](servico)
+    - o que é [audiometria](servico)
 
-- intent: tribunal_2
+- intent: dsc_etapas
   examples: |
-    - qual instituição é localizado em [Brasília](LOC) e foi fundado por [Rui Barbosa](PESSOA)
-    - instituição localizado em [Brasília](LOC) efundado por [Rui Barbosa](PESSOA)
-    - qual instituição foi fundado por [Rui Barbosa](PESSOA) e está localizado em [Brasília](LOC)
+    - quais as etapas da [audiometria](servico)?
+    - quais são as etapas da [audiometria](servico)?

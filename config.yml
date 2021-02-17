@@ -1,6 +1,6 @@
 # Configuration for Rasa NLU.
 # https://rasa.com/docs/rasa/nlu/components/
-language: en
+language: pt-br
 
 pipeline:
 # # No configuration for the NLU pipeline was provided. The following default pipeline was used to train your model.
@@ -10,7 +10,6 @@ pipeline:
    - name: bert_featurizer.BertFeaturizer
    - name: DIETClassifier
      epochs: 100
-   - name: bert_ner.BertEntityExtractor
    - name: EntitySynonymMapper
    - name: ResponseSelector
      epochs: 100

@@ -2,22 +2,22 @@ version: "2.0"
 
 stories:
 
-- story: pink floyd 1
+- story: dsc requisitos
   steps:
-  - intent: pink_floyd_1
-  - action: utter_pink_floyd_1
+  - intent: dsc_requisitos
+  - action: utter_dsc_requisitos
 
-- story: pink floyd 2
+- story: dsc servico
   steps:
-  - intent: pink_floyd_2
-  - action: utter_pink_floyd_2
+  - intent: dsc_servico
+  - action: utter_dsc_servico
 
-- story: instituicao 1
+- story: dsc horario
   steps:
-  - intent: tribunal_1
-  - action: utter_tribunal_1
+  - intent: dsc_horario
+  - action: utter_dsc_horario
 
-- story: instituicao 2
+- story: dsc etapas
   steps:
-  - intent: tribunal_2
-  - action: utter_tribunal_2
+  - intent: dsc_etapas
+  - action: utter_dsc_etapas

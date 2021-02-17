@@ -30,15 +30,13 @@ class BertEntityExtractor(EntityExtractor):
 
     @staticmethod
     def extract_entities(doc: "Doc") -> List[Dict[Text, Any]]:
-
         entities = []
         for token in doc:
             entities.append(
                 {
-                    "entity": token['group_entity'],
+                    "entity": token['entity_group'],
                     "value": token['word'],
                     "confidence": token['score'],
                 }
-                for token in l
             )
         return entities
