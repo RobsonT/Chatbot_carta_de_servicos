@@ -6,7 +6,7 @@ intents:
   - dsc_requisitos
   - dsc_servico
   - name_request
-  - dsc_etapas
+  - dsc_etapas_atendimento
   - dsc_local_presencial
   - dsc_documentos_objetivo
   - dsc_documentos
@@ -15,6 +15,8 @@ intents:
   - dsc_horarios_funcionamento
   - dsc_horarios_funcionamento_objetivo
   - enunciation
+  - dsc_horario_atendimento
+  - dsc_documentos_objetivo_estado_civil
 
 entities:
   - servico
@@ -24,8 +26,11 @@ slots:
     type: text
 
 responses:
-  utter_repita:
+  utter_default::
   - text: Desculpe, não entendi. Poderia repetir?
+
+  utter_dsc_documentos_objetivo_estado_civil:
+  - text: Você quer saber e um determinado documenta para um determinado estado civil?
 
   utter_greet:
   - text: "olá, o que gostaria de saber?"
@@ -42,7 +47,7 @@ responses:
   utter_dsc_servico:
   - text: "você quer saber o que é o serviço"
 
-  utter_dsc_etapas:
+  utter_dsc_etapas_atendimento:
   - text: "você quer saber quais são as etapas"
 
   utter_dsc_local_presencial:
@@ -61,6 +66,9 @@ responses:
   - text: "você quer saber se determinado documento é necesário dado determinado estado civil"
 
   utter_dsc_horarios_funcionamento:
+  - text: "você quer saber qual o horário de funcionamento"
+
+  utter_dsc_horario_atendimento:
   - text: "você quer saber qual o horário de funcionamento"
 
   utter_dsc_horarios_funcionamento_objetivo:

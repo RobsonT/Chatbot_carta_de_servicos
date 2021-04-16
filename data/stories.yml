@@ -24,8 +24,8 @@ stories:
 
 - story: dsc etapas
   steps:
-  - intent: dsc_etapas
-  - action: utter_dsc_etapas
+  - intent: dsc_etapas_atendimento
+  - action: utter_dsc_etapas_atendimento
 
 - story: dsc local presencial
   steps:
@@ -52,10 +52,20 @@ stories:
   - intent: dsc_documentos_estado_civil
   - action: utter_dsc_documentos_estado_civil
 
+- story: dsc documentos objetivo estado civil
+  steps:
+  - intent: dsc_documentos_objetivo_estado_civil
+  - action: utter_dsc_documentos_objetivo_estado_civil
+
 - story: dsc horarios funcionamento objetivo
   steps:
   - intent: dsc_horarios_funcionamento_objetivo
   - action: utter_dsc_horarios_funcionamento_objetivo
+
+- story: dsc horario atendimento
+  steps:
+  - intent: dsc_horario_atendimento
+  - action: utter_dsc_horario_atendimento
 
 - story: enunciation services
   steps:

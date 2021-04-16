@@ -11,8 +11,3 @@ rules:
   steps:
   - intent: greet
   - action: utter_greet
-
-- rule: Ask the user to rephrase whenever they send a message with low NLU confidence
-  steps:
-  - intent: nlu_fallback
-  - action: utter_repita

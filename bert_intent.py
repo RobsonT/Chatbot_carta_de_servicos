@@ -1,18 +1,23 @@
 import typing
 from typing import Any, Dict, List, Text, Optional, Type
 
-from transformers import TFBertForSequenceClassification, BERTTokenizer
+from transformers import TFBertForSequenceClassification
+from rasa.nlu.classifiers.classifier import IntentClassifier
 from rasa.shared.nlu.constants import INTENT
 from rasa.nlu.components import Component
 from rasa.nlu.config import RasaNLUModelConfig
 from rasa.shared.nlu.training_data.message import Message
 from rasa.shared.nlu.training_data.training_data import TrainingData
-from rasa.nlu.extractors.extractor import EntityExtractor
+import tensorflow as tf
+from rasa.nlu.utils.hugging_face.registry import (
+            model_class_dict,
+            model_tokenizer_dict,
+        )
 
 if typing.TYPE_CHECKING:
     from rasa.nlu.model import Metadata
 
-tokenizer = BertTokenizer.from_pretrained('neuralmind/bert-base-portuguese-cased', model_max_length = 128, do_lower_case=False)
+tokenizer = model_tokenizer_dict['bert'].from_pretrained('neuralmind/bert-base-portuguese-cased', model_max_length = 128, do_lower_case=False)
 model = TFBertForSequenceClassification.from_pretrained('./experimento_1')
 
 class BertIntentClassifier(IntentClassifier):
@@ -34,6 +39,6 @@ class BertIntentClassifier(IntentClassifier):
         ), axis = -1)
         confidence = tf.nn.softmax(
             outputs['logits'], axis=-1
-        )[intent_indice]
-        intent = model.config.id2label[intent_indice]
+        )[0][intent_indice.numpy()[0]]
+        intent = model.config.id2label[intent_indice.numpy()[0]]
         return {"name": intent, "confidence": confidence}
