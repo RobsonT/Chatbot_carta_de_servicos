@@ -3,11 +3,18 @@ version: "2.0"
 intents:
   - greet
   - goodbye
-  - affirm
   - dsc_requisitos
   - dsc_servico
-  - dsc_horario
+  - name_request
   - dsc_etapas
+  - dsc_local_presencial
+  - dsc_documentos_objetivo
+  - dsc_documentos
+  - dsc_local_presencial_objetivo
+  - dsc_documentos_estado_civil
+  - dsc_horarios_funcionamento
+  - dsc_horarios_funcionamento_objetivo
+  - enunciation
 
 entities:
   - servico
@@ -17,6 +24,9 @@ slots:
     type: text
 
 responses:
+  utter_repita:
+  - text: Desculpe, não entendi. Poderia repetir?
+
   utter_greet:
   - text: "olá, o que gostaria de saber?"
 
@@ -24,16 +34,43 @@ responses:
   - text: "tchau"
 
   utter_dsc_requisitos:
-  - text: "para realizar o serviço é necessario os seguintes documentos..."
+  - text: "você quer saber quais os requisitos"
+
+  utter_dsc_documentos:
+  - text: "você quer saber quais os documentos"
   
   utter_dsc_servico:
-  - text: "a audiometria é..."
-
-  utter_dsc_horario:
-  - text: "os horários de atendimento são"
+  - text: "você quer saber o que é o serviço"
 
   utter_dsc_etapas:
-  - text: "as etpas são..."
+  - text: "você quer saber quais são as etapas"
+
+  utter_dsc_local_presencial:
+  - text: "você quer saber os locais em que o serviço pode ser realizado."
+
+  utter_dsc_local_presencial_objetivo:
+  - text: "você quer saber se o serviço está diponivel em um local especifico."
+  
+  utter_dsc_documentos_objetivo:
+  - text: "você quer saber se determinado documento é necesário"
+  
+  utter_dsc_documentos_estado_civil:
+  - text: "você quer saber quais documentos são necesários dado determinado estado civil"
+  
+  utter_dsc_documentos_estado_civil_objetivo:
+  - text: "você quer saber se determinado documento é necesário dado determinado estado civil"
+
+  utter_dsc_horarios_funcionamento:
+  - text: "você quer saber qual o horário de funcionamento"
+
+  utter_dsc_horarios_funcionamento_objetivo:
+  - text: "você quer saber se determinado serviço pode ser realizado em determinado horário"
+
+  utter_name_request:
+  - text: "Sou um robô"
+
+  utter_enunciation:
+  - text: "lista de serviços"
 
 session_config:
   session_expiration_time: 60

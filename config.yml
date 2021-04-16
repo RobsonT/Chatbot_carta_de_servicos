@@ -8,13 +8,11 @@ pipeline:
 # # See https://rasa.com/docs/rasa/tuning-your-model for more information.
    - name: LanguageModelTokenizer
    - name: bert_featurizer.BertFeaturizer
-   - name: DIETClassifier
-     epochs: 100
-   - name: EntitySynonymMapper
+   - name: bert_intent.BertIntentClassifier
    - name: ResponseSelector
      epochs: 100
    - name: FallbackClassifier
-     threshold: 0.3
+     threshold: 0.7
      ambiguity_threshold: 0.1
 
 # Configuration for Rasa Core.

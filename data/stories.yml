@@ -12,12 +12,52 @@ stories:
   - intent: dsc_servico
   - action: utter_dsc_servico
 
-- story: dsc horario
+- story: dsc horario atendimento
   steps:
-  - intent: dsc_horario
-  - action: utter_dsc_horario
+  - intent: dsc_horarios_funcionamento
+  - action: utter_dsc_horarios_funcionamento
+
+- story: name request
+  steps:
+  - intent: name_request
+  - action: utter_name_request
 
 - story: dsc etapas
   steps:
   - intent: dsc_etapas
   - action: utter_dsc_etapas
+
+- story: dsc local presencial
+  steps:
+  - intent: dsc_local_presencial
+  - action: utter_dsc_local_presencial
+
+- story: dsc documentos objetivo
+  steps:
+  - intent: dsc_documentos_objetivo
+  - action: utter_dsc_documentos_objetivo
+  
+- story: dsc documentos
+  steps:
+  - intent: dsc_documentos
+  - action: utter_dsc_documentos
+
+- story: dsc local presencial objetivo
+  steps:
+  - intent: dsc_local_presencial_objetivo
+  - action: utter_dsc_local_presencial_objetivo
+  
+- story: dsc documentos estado civil
+  steps:
+  - intent: dsc_documentos_estado_civil
+  - action: utter_dsc_documentos_estado_civil
+
+- story: dsc horarios funcionamento objetivo
+  steps:
+  - intent: dsc_horarios_funcionamento_objetivo
+  - action: utter_dsc_horarios_funcionamento_objetivo
+
+- story: enunciation services
+  steps:
+  - intent: enunciation
+  - action: utter_enunciation
