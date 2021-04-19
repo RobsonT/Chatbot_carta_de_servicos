@@ -11,6 +11,8 @@ pipeline:
    - name: bert_intent.BertIntentClassifier
    - name: ResponseSelector
      epochs: 100
+   - name: FallbackClassifier
+     threshold: 0.7
 
 # Configuration for Rasa Core.
 # https://rasa.com/docs/rasa/core/policies/

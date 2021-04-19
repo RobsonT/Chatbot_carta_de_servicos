@@ -26,7 +26,7 @@ slots:
     type: text
 
 responses:
-  utter_default::
+  utter_default:
   - text: Desculpe, não entendi. Poderia repetir?
 
   utter_dsc_documentos_objetivo_estado_civil:
