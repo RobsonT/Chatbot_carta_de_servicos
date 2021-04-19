@@ -39,6 +39,6 @@ class BertIntentClassifier(IntentClassifier):
         ), axis = -1)
         confidence = tf.nn.softmax(
             outputs['logits'], axis=-1
-        )[0][intent_indice.numpy()[0]]
+        )[0][intent_indice.numpy()[0]].numpy()
         intent = model.config.id2label[intent_indice.numpy()[0]]
         return {"name": intent, "confidence": confidence}
